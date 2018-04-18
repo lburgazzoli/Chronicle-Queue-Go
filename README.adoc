@@ -1,0 +1,4 @@
+= Chronicle-Queue-Go
+Peter Lawrey
+
+Go implementation of Chronicle Queue using Chronicle Bytes Go
