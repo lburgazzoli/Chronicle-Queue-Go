@@ -1,6 +1,6 @@
 package queue
 
-import "github.com/lburgazzoli/Chronicle-Queue-Go/core"
+import "github.com/OpenHFT/Chronicle-Queue-Go/core"
 
 // Document --
 type Document interface {
