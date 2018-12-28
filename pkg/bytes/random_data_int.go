@@ -75,7 +75,7 @@ func (data *RandomDataIn) VolatileReadInt64(offset int64) int64 {
 }
 
 // WriteInt8 --
-func (data *RandomDataIn) WriteInt8(offset int64, value int8) {
+func (data *RandomDataOut) WriteInt8(offset int64, value int8) {
 	CheckBounds(offset, 1, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -84,7 +84,7 @@ func (data *RandomDataIn) WriteInt8(offset int64, value int8) {
 }
 
 // WriteInt16 --
-func (data *RandomDataIn) WriteInt16(offset int64, value int16) {
+func (data *RandomDataOut) WriteInt16(offset int64, value int16) {
 	CheckBounds(offset, 2, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -93,7 +93,7 @@ func (data *RandomDataIn) WriteInt16(offset int64, value int16) {
 }
 
 // WriteInt32 --
-func (data *RandomDataIn) WriteInt32(offset int64, value int32) {
+func (data *RandomDataOut) WriteInt32(offset int64, value int32) {
 	CheckBounds(offset, 4, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -102,7 +102,7 @@ func (data *RandomDataIn) WriteInt32(offset int64, value int32) {
 }
 
 // WriteInt64 --
-func (data *RandomDataIn) WriteInt64(offset int64, value int64) {
+func (data *RandomDataOut) WriteInt64(offset int64, value int64) {
 	CheckBounds(offset, 8, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -111,7 +111,7 @@ func (data *RandomDataIn) WriteInt64(offset int64, value int64) {
 }
 
 // WriteInt32Ordered --
-func (data *RandomDataIn) WriteInt32Ordered(offset int64, value int32) {
+func (data *RandomDataOut) WriteInt32Ordered(offset int64, value int32) {
 	CheckBounds(offset, 4, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -121,7 +121,7 @@ func (data *RandomDataIn) WriteInt32Ordered(offset int64, value int32) {
 }
 
 // WriteInt64Ordered --
-func (data *RandomDataIn) WriteInt64Ordered(offset int64, value int64) {
+func (data *RandomDataOut) WriteInt64Ordered(offset int64, value int64) {
 	CheckBounds(offset, 8, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -203,7 +203,7 @@ func (data *RandomDataIn) VolatileReadUnsignedInt64(offset int64) uint64 {
 }
 
 // WriteUnsignedInt8 --
-func (data *RandomDataIn) WriteUnsignedInt8(offset int64, value uint8) {
+func (data *RandomDataOut) WriteUnsignedInt8(offset int64, value uint8) {
 	CheckBounds(offset, 1, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -212,7 +212,7 @@ func (data *RandomDataIn) WriteUnsignedInt8(offset int64, value uint8) {
 }
 
 // WriteUnsignedInt16 --
-func (data *RandomDataIn) WriteUnsignedInt16(offset int64, value uint16) {
+func (data *RandomDataOut) WriteUnsignedInt16(offset int64, value uint16) {
 	CheckBounds(offset, 2, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -221,7 +221,7 @@ func (data *RandomDataIn) WriteUnsignedInt16(offset int64, value uint16) {
 }
 
 // WriteUnsignedInt32 --
-func (data *RandomDataIn) WriteUnsignedInt32(offset int64, value uint32) {
+func (data *RandomDataOut) WriteUnsignedInt32(offset int64, value uint32) {
 	CheckBounds(offset, 4, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -230,7 +230,7 @@ func (data *RandomDataIn) WriteUnsignedInt32(offset int64, value uint32) {
 }
 
 // WriteUnsignedInt64 --
-func (data *RandomDataIn) WriteUnsignedInt64(offset int64, value uint64) {
+func (data *RandomDataOut) WriteUnsignedInt64(offset int64, value uint64) {
 	CheckBounds(offset, 8, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -239,7 +239,7 @@ func (data *RandomDataIn) WriteUnsignedInt64(offset int64, value uint64) {
 }
 
 // WriteUnsignedInt32Ordered --
-func (data *RandomDataIn) WriteUnsignedInt32Ordered(offset int64, value uint32) {
+func (data *RandomDataOut) WriteUnsignedInt32Ordered(offset int64, value uint32) {
 	CheckBounds(offset, 4, data.size)
 
 	ptr := data.pointerForOffset(offset)
@@ -249,7 +249,7 @@ func (data *RandomDataIn) WriteUnsignedInt32Ordered(offset int64, value uint32) 
 }
 
 // WriteUnsignedInt64Ordered --
-func (data *RandomDataIn) WriteUnsignedInt64Ordered(offset int64, value uint64) {
+func (data *RandomDataOut) WriteUnsignedInt64Ordered(offset int64, value uint64) {
 	CheckBounds(offset, 8, data.size)
 
 	ptr := data.pointerForOffset(offset)
