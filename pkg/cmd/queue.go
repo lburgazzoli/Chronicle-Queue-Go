@@ -10,7 +10,22 @@ func NewQueueCommand(root *cobra.Command) *cobra.Command {
 		Short: "queue",
 	}
 
-	cmd.AddCommand(NewQueueTailCommand(root))
+	impl := QueueCommand{
+		Root: root,
+	}
+
+	//
+	// TODO: add persistent flags
+	//
+
+	// add sub commands
+	cmd.AddCommand(NewQueueInfoCommand(impl))
+	cmd.AddCommand(NewQueueTailCommand(impl))
 
 	return &cmd
+}
+
+// QueueCommand --
+type QueueCommand struct {
+	Root *cobra.Command
 }

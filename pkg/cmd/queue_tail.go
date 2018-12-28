@@ -4,9 +4,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func NewQueueTailCommand(root *cobra.Command) *cobra.Command {
+func NewQueueTailCommand(queue QueueCommand) *cobra.Command {
 	impl := QueueTailCommand{
-		root: root,
+		queue: queue,
 	}
 
 	cmd := cobra.Command{
@@ -21,7 +21,7 @@ func NewQueueTailCommand(root *cobra.Command) *cobra.Command {
 
 // QueueTailCommand --
 type QueueTailCommand struct {
-	root *cobra.Command
+	queue QueueCommand
 }
 
 func (c *QueueTailCommand) Execute(cmd *cobra.Command, args []string) {
